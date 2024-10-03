@@ -11,8 +11,9 @@ class NotesViews extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
+            /// if i want change border radius, just the change in here only.
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(10),
             ),
             context: context,
             builder: (context) {
