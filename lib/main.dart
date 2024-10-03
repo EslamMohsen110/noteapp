@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:noteapp/views/notes_views.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         fontFamily: 'Poppins',
       ),
-      home: NotesViews(),
+      home: const NotesViews(),
     );
   }
 }
