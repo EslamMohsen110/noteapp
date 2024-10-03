@@ -17,20 +17,30 @@ class NoteItem extends StatelessWidget {
           ListTile(
             title: Text(
               'Flutter Tips',
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(color: Colors.black, fontSize: 26),
             ),
-            subtitle: Text(
-              'build your career with Eslam Mohsen',
-              style: TextStyle(color: Colors.black),
+            subtitle: Padding(
+              padding: const EdgeInsets.only(top: 15),
+              child: Text(
+                'build your career with Eslam Mohsen',
+                style: TextStyle(
+                    color: Colors.black.withOpacity(0.6), fontSize: 17),
+              ),
             ),
             trailing: Icon(
               Icons.delete,
               color: Colors.black,
+              size: 30,
             ),
           ),
-          Text(
-            'Oct28 , 1999',
-            style: TextStyle(color: Colors.black),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 6, right: 10, top: 20),
+            child: Text(
+              'Oct28 , 1999',
+              style: TextStyle(
+                color: Colors.black.withOpacity(0.6),
+              ),
+            ),
           ),
         ],
       ),
