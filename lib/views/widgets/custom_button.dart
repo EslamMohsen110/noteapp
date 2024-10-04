@@ -6,18 +6,18 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height * 0.06,
       child: ElevatedButton(
         onPressed: () {},
-        child: Text(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: KPrimaryColor,
+        ),
+        child: const Text(
           'Add',
           style: TextStyle(
               color: KBlackColor, fontWeight: FontWeight.bold, fontSize: 16),
-        ),
-        style: ElevatedButton.styleFrom(
-          backgroundColor: KPrimaryColor,
         ),
       ),
     );

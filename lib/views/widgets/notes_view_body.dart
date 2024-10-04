@@ -10,7 +10,10 @@ class NotesViewBody extends StatelessWidget {
     return const SafeArea(
       child: Column(
         children: [
-          CustomAppBar(),
+          CustomAppBar(
+            title: 'Notes',
+            icon: Icons.search,
+          ),
           Expanded(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.0),
