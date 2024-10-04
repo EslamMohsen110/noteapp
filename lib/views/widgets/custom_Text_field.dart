@@ -22,13 +22,7 @@ class CustomTextField extends StatelessWidget {
       child: TextFormField(
         keyboardType: keyboardType,
         onSaved: onSaved,
-        validator: (value) {
-          if (value?.isEmpty ?? true) {
-            return 'Field is required';
-          } else {
-            return null;
-          }
-        },
+        validator: validatorMethod,
         cursorColor: kPrimaryColor,
         maxLines: maxLine,
         decoration: InputDecoration(
@@ -40,6 +34,14 @@ class CustomTextField extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  String? validatorMethod(value) {
+    if (value?.isEmpty ?? true) {
+      return 'Field is required';
+    } else {
+      return null;
+    }
   }
 
   OutlineInputBorder buildBorder([color]) {
