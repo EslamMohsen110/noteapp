@@ -1,6 +1,6 @@
 import 'package:hive/hive.dart';
 
-///How to make generate or to create type adapter ?
+///How to make generate and to create type adapter ?
 
 /// the first create class of Hive Object in class model extend it.
 /// the second create object of type adapter ==> @HiveType(typeId: 0) out class above class.
