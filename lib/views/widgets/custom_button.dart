@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:noteapp/constants.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
+  const CustomButton({super.key, this.onPressed});
+
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -10,14 +12,17 @@ class CustomButton extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height * 0.06,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: kPrimaryColor,
         ),
         child: const Text(
           'Add',
           style: TextStyle(
-              color: kBlackColor, fontWeight: FontWeight.bold, fontSize: 16),
+            color: kBlackColor,
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
         ),
       ),
     );

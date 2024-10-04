@@ -6,16 +6,29 @@ class CustomTextField extends StatelessWidget {
     super.key,
     required this.hint,
     this.maxLine = 1,
+    this.onSaved,
+    this.keyboardType,
   });
 
   final String hint;
   final int maxLine;
+  final void Function(String?)? onSaved;
+  final TextInputType? keyboardType;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: TextField(
+      child: TextFormField(
+        keyboardType: keyboardType,
+        onSaved: onSaved,
+        validator: (value) {
+          if (value?.isEmpty ?? true) {
+            return 'Field is required';
+          } else {
+            return null;
+          }
+        },
         cursorColor: kPrimaryColor,
         maxLines: maxLine,
         decoration: InputDecoration(
