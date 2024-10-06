@@ -5,7 +5,8 @@ import 'package:noteapp/models/note_model.dart';
 import 'package:noteapp/views/notes_views.dart';
 
 /// The first Create init flutter in main.
-/// The second Create open Box in main.
+/// The second Create open Box in main ==> Like collection in fire base ==> this store data (Box) .
+/// The third Create register adapter in main from model adapter ==> .
 
 void main() async {
   await Hive.initFlutter();
