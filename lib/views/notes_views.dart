@@ -12,6 +12,7 @@ class NotesViews extends StatelessWidget {
         onPressed: () {
           showModalBottomSheet(
             /// if i want change border radius, just the change in here only.
+            isScrollControlled: true,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
